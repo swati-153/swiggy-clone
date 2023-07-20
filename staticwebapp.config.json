@@ -1,0 +1,27 @@
+{
+    "routes": [
+      {
+        "route": "/",
+        "serve": "/index.html",
+        "statusCode": 200
+      },
+      {
+        "route": "/style.css",
+        "serve": "/style.css",
+        "statusCode": 200
+      },
+      {
+        "route": "/:path*",
+        "serve": "/index.html",
+        "statusCode": 404
+      }
+    ],
+    "navigationFallback": {
+      "rewrite": "/index.html",
+      "statusCode": 200
+    },
+    "globalHeaders": {
+      "Cache-Control": "max-age=31536000"
+    }
+  }
+  
